@@ -4,9 +4,40 @@ class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
   @override
   Widget build(context) {
-    return const Text(
-      "data",
-      style: TextStyle(color: Colors.red, fontSize: 30),
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            "assets/images/quiz-logo.png",
+            width: 300,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          const Text(
+            "Bu savol javob application",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          OutlinedButton.icon(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.arrow_right_alt,
+              color: Colors.white,
+            ),
+            label: const Text(
+              "Boshlash",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
